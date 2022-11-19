@@ -1,10 +1,10 @@
 import BotaoSmS from "./components/BotaoSmS"
+import Cabecalho from "./components/Cabecalho"
 
 function App() {
   return(
     <> 
-    <h1>E ai porra...</h1>
-    <BotaoSmS />
+      <Cabecalho></Cabecalho>
     </>
   )
 }
