@@ -11,6 +11,9 @@ Verasão instalada  - yarn add react-datepicker@4.8.0 @types/react-datepicker@4.
     dateFormat="dd/MM/yyyy"
 />
 
+-- peagar uma data de um ano atras
+const date = new Date(new Date().setDate(new Date().getDate() - 365));
+
 --import necessario 
 import DatePicker from "react-datepicker";
 import "react-datepicker/dist/react-datepicker.css";
