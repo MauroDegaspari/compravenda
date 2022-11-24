@@ -2,16 +2,43 @@ package com.mdegaspari.compravenda.model;
 
 import java.time.LocalDate;
 
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
+import javax.persistence.Table;
+
+@Entity
+@Table(name="dbasytem.venda")
 public class VendasModel {
 	
-	private int codigo_venda;  
-    private LocalDate data_venda;   
-    private int qt_vistas;  
+	@Id
+	@Column(name="cd_venda")
+	@GeneratedValue(strategy = GenerationType.IDENTITY)	
+	private int codigo_venda;
+	
+	@Column(name="DT_VENDA")
+    private LocalDate data_venda;
+	
+	@Column(name="QT_VISITAS")
+    private int qt_vistas; 
+	
+	@Column(name="QT_VENDAS")
     private int qt_vendas;
+	
+	@Column(name="TOTAL")
     private double total;
 	
+	@ManyToOne
+	@JoinColumn(name="cd_usuairo" )
+    private UsuarioModel usuario;
+	
     
-    public int getCodigo_venda() {
+   
+	public int getCodigo_venda() {
 		return codigo_venda;
 	}
 	public void setCodigo_venda(int codigo_venda) {
@@ -42,6 +69,12 @@ public class VendasModel {
 		this.total = total;
 	}
     
+	 public UsuarioModel getUsuario() {
+			return usuario;
+	}
+	public void setUsuario(UsuarioModel usuario) {
+	 	this.usuario = usuario;
+	}
     
     
 
