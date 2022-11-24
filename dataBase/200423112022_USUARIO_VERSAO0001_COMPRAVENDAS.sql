@@ -12,7 +12,7 @@ CREATE TABLE dbasystem.usuario (
 
     cd_usuario NUMBER   NOT NULL,
     ds_nome    VARCHAR2(100) NULL,
-    ds_senha   VARCHAR2 NOT null
+    ds_senha   VARCHAR2(8) NOT null
 
 )
 
