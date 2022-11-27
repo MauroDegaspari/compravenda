@@ -8,7 +8,7 @@ import javax.persistence.Id;
 import javax.persistence.Table;
 
 @Entity
-@Table(name = ("dbasystem.usuario"))
+@Table(name = ("usuario"))
 public class UsuarioModel {
 	
 	@Id

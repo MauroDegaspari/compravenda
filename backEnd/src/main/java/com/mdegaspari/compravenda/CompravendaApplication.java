@@ -8,6 +8,9 @@ public class CompravendaApplication {
 
 	public static void main(String[] args) {
 		SpringApplication.run(CompravendaApplication.class, args);
+		
+		
+		
 	}
 
 }
