@@ -33,7 +33,7 @@ public class VendasModel {
     private double total;
 	
 	@ManyToOne
-	@JoinColumn(name="cd_usuairo" )
+	@JoinColumn(name="cd_usuario" )
     private UsuarioModel usuario;
 	
     
